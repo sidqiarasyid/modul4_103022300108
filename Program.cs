@@ -117,7 +117,13 @@ class Run
         Console.Write("Masukkan nama produk: ");
         string input = Console.ReadLine();
         string kode = prod.getKode(input);
-        Console.WriteLine("Kode Produk: " + kode);
+        if (kode != "") {
+            Console.WriteLine("Kode Produk: " + kode);
+        } else
+        {
+            Console.WriteLine("Produk tidak ditemukan");
+        }
+   
 
         FanLaptop fan = new FanLaptop();
         fan.changeState();
